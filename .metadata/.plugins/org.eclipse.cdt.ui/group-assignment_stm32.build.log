@@ -1,0 +1,22 @@
+09:48:00 **** Incremental Build of configuration Debug for project group-assignment_stm32 ****
+make -j12 all 
+arm-none-eabi-gcc -o "group-assignment_stm32.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\MCU_LAB\group-assignment\group-assignment_stm32\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="group-assignment_stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: group-assignment_stm32.elf
+ 
+arm-none-eabi-size   group-assignment_stm32.elf 
+arm-none-eabi-objdump -h -S  group-assignment_stm32.elf  > "group-assignment_stm32.list"
+arm-none-eabi-objcopy  -O ihex  group-assignment_stm32.elf  "group-assignment_stm32.hex"
+arm-none-eabi-objcopy  -O binary  group-assignment_stm32.elf  "group-assignment_stm32.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5036	     20	   1644	   6700	   1a2c	group-assignment_stm32.elf
+Finished building: default.size.stdout
+ 
+Finished building: group-assignment_stm32.hex
+Finished building: group-assignment_stm32.bin
+ 
+ 
+Finished building: group-assignment_stm32.list
+ 
+
+09:48:00 Build Finished. 0 errors, 0 warnings. (took 360ms)
+
