@@ -8,13 +8,13 @@
 #include "global.h"
 
 
-int getTimeAtIndex0(int time) {
-	int temp = time/10;
-	return temp;
-}
-int getTimeAtIndex1(int time) {
-	return time%10;
-}
+//int getTimeAtIndex0(int time) {
+//	int temp = time/10;
+//	return temp;
+//}
+//int getTimeAtIndex1(int time) {
+//	return time%10;
+//}
 
 //int led7SegState = 1;
 //int led7SegState2 = 1;

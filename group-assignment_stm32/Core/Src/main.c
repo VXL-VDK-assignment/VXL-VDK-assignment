@@ -112,6 +112,7 @@ int main(void)
   char str[50];
   while (1)
   {
+	  initSomeVariables();
 	  HAL_UART_Transmit(&huart2 , (void*)str, sprintf (str, "%d\n", aValue), 1000);
 	  fsm_for_input_processing();
     /* USER CODE END WHILE */
