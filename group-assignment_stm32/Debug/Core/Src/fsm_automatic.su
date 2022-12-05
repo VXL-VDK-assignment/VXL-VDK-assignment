@@ -1,0 +1,4 @@
+fsm_automatic.c:11:5:getTimeAtIndex0	24	static
+fsm_automatic.c:15:5:getTimeAtIndex1	16	static
+fsm_automatic.c:22:6:fsm_automatic_run1	8	static
+fsm_automatic.c:92:6:fsm_automatic_run2	8	static
