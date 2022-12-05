@@ -1,0 +1,10 @@
+10:19:01 **** Incremental Build of configuration Debug for project RB ****
+make -j12 all 
+arm-none-eabi-size   RB.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4616	     20	   1572	   6208	   1840	RB.elf
+Finished building: default.size.stdout
+ 
+
+10:19:02 Build Finished. 0 errors, 0 warnings. (took 202ms)
+

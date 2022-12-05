@@ -1,0 +1,101 @@
+/*
+ * input_processing.c
+ *
+ *  Created on: Oct 31, 2022
+ *      Author: tamqu
+ */
+#include "input_processing.h"
+#include "fsm_automatic.h"
+#include "global.h"
+
+enum ButtonState { NORMAL, SET_TIME_RED, SET_TIME_YELLOW, SET_TIME_GREEN } ;
+enum ButtonState buttonState = NORMAL ;
+int counterForRed = 0;
+int counterForGreen = 0;
+int counterForYellow = 0;
+int flag = 0;
+
+int led7SegScanning = 1;
+void fsm_for_input_processing(void){
+	switch(buttonState){
+		case NORMAL: //Mode 1
+			//các led đơn và led7seg sáng bthg
+			countDownGreen1 = 0;
+			countDownGreen2 = 0;
+			countDownRed1 = 0;
+			countDownRed2 = 0;
+			countDownYellow1 = 0;
+			countDownYellow2 = 0;
+			LANE1_STATUS = LANE1_INIT;
+			LANE2_STATUS = LANE2_INIT;
+			while(1) {
+				fsm_automatic_run1();
+				fsm_automatic_run2();
+				if(isButton1Press() == 1) {
+					buttonState = SET_TIME_RED;
+					setTrafficRed1();
+					setTrafficRed2();
+					flag = 0; //reset
+					break;
+				}
+			}
+			break;
+		case SET_TIME_RED: //Mode 2
+			while (flag == 0) {
+				if (isButton2Press() == 1) counterForRed++;
+
+				if(isButton3Press() == 1) {
+					led_duration[0] += counterForRed;
+					if (led_duration[0] > 99) led_duration[0] = 1;
+					counterForRed = 0; //reset
+				}
+				if(isButton1Press() == 1) {
+					buttonState = SET_TIME_YELLOW;
+					setTrafficYellow1();
+					setTrafficYellow2();
+					flag = 1;
+					counterForRed = 0; //rest
+				}
+			}
+			break;
+		case SET_TIME_YELLOW: //Mode 3
+			flag = 0;
+			while (flag == 0) {
+				if (isButton2Press() == 1) counterForYellow++;
+
+				if(isButton3Press() == 1) {
+					led_duration[1] += counterForYellow;
+					if (led_duration[1] > 99) led_duration[1] = 1;
+					counterForYellow = 0; //reset
+				}
+				if(isButton1Press() == 1) {
+					buttonState = SET_TIME_GREEN;
+					setTrafficGreen1();
+					setTrafficGreen2();
+					flag = 1;
+					counterForYellow = 0; //reset
+				}
+			}
+			break;
+		case SET_TIME_GREEN: //Mode 4
+			flag = 0;
+			while (flag == 0) {
+				if (isButton2Press() == 1) counterForGreen++;
+
+				if(isButton3Press() == 1) {
+					led_duration[2] += counterForGreen;
+					if (led_duration[2] > 99) led_duration[2] = 1;
+					counterForGreen = 0; //reset
+				}
+				if(isButton1Press() == 1) {
+					buttonState = NORMAL;
+					flag = 1;
+					counterForGreen = 0; //reset
+				}
+			}
+			break;
+	}
+}
+
+
+
