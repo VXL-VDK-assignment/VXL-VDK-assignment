@@ -103,6 +103,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT (&huart2 , &temp , 1) ;
+  HAL_TIM_Base_Start_IT (& htim2 ) ;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -110,9 +111,9 @@ int main(void)
 
   uint32_t aValue = 8;
   char str[50];
+  initSomeVariables();
   while (1)
   {
-	  initSomeVariables();
 	  HAL_UART_Transmit(&huart2 , (void*)str, sprintf (str, "%d\n", aValue), 1000);
 	  fsm_for_input_processing();
     /* USER CODE END WHILE */
@@ -283,6 +284,11 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
+	timerRun();
+
+	getKeyInput();
+}
 
 /* USER CODE END 4 */
 

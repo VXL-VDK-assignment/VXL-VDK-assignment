@@ -8,7 +8,8 @@
 #include "fsm_automatic.h"
 #include "global.h"
 
-enum ButtonState { NORMAL, SET_TIME_RED, SET_TIME_YELLOW, SET_TIME_GREEN };
+enum ButtonState { NORMAL, SET_TIME_RED,
+										SET_TIME_YELLOW, SET_TIME_GREEN };
 enum ButtonState buttonState = NORMAL;
 
 int counterForRed = 0;

@@ -1,8 +1,8 @@
 led_display.c:32:6:initTrafficLight1	8	static
 led_display.c:37:6:initTrafficLight2	8	static
-led_display.c:41:6:setTrafficRed1	8	static
-led_display.c:45:6:setTrafficRed2	8	static
-led_display.c:50:6:setTrafficGreen1	8	static
-led_display.c:54:6:setTrafficGreen2	8	static
+led_display.c:41:6:setTrafficGreen1	8	static
+led_display.c:45:6:setTrafficGreen2	8	static
+led_display.c:50:6:setTrafficRed1	8	static
+led_display.c:54:6:setTrafficRed2	8	static
 led_display.c:59:6:setTrafficYellow1	8	static
 led_display.c:64:6:setTrafficYellow2	8	static
