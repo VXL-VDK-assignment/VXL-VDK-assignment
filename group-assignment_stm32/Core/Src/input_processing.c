@@ -42,12 +42,19 @@ void fsm_for_input_processing(void){
 					setTrafficRed1();
 					setTrafficRed2();
 					loopFlag = 0; //reset
+					timer1_flag = 1; //for toggle LEDs in mode 2, 3, 4
 					break;
 				}
 			}
 			break;
 		case SET_TIME_RED: //Mode 2
 			while (loopFlag == 0) {
+				if (timer1_flag == 1) { //toggle RED LEDs every 0.5s
+					setTimer1(500);
+					HAL_GPIO_TogglePin(D2_GPIO_Port, D2_Pin);
+					HAL_GPIO_TogglePin(D4_GPIO_Port, D4_Pin);
+				}
+
 				if (isButtonPressed(1) == 1) counterForRed++;
 
 				if(isButtonPressed(2) == 1) {
@@ -61,6 +68,7 @@ void fsm_for_input_processing(void){
 					setTrafficYellow1();
 					setTrafficYellow2();
 					loopFlag = 1;
+					timer1_flag = 1; //for toggle LEDs in mode 2, 3, 4
 					counterForRed = 0; //rest
 				}
 			}
@@ -68,6 +76,14 @@ void fsm_for_input_processing(void){
 		case SET_TIME_YELLOW: //Mode 3
 			loopFlag = 0;
 			while (loopFlag == 0) {
+				if (timer1_flag == 1) { //toggle YELLOW LEDs every 0.5s
+					setTimer1(500);
+					HAL_GPIO_TogglePin(D2_GPIO_Port, D2_Pin);
+					HAL_GPIO_TogglePin(D3_GPIO_Port, D3_Pin);
+					HAL_GPIO_TogglePin(D4_GPIO_Port, D4_Pin);
+					HAL_GPIO_TogglePin(D5_GPIO_Port, D5_Pin);
+				}
+
 				if (isButtonPressed(1) == 1) counterForYellow++;
 
 				if(isButtonPressed(2) == 1) {
@@ -81,6 +97,7 @@ void fsm_for_input_processing(void){
 					setTrafficGreen1();
 					setTrafficGreen2();
 					loopFlag = 1;
+					timer1_flag = 1; //for toggle LEDs in mode 2, 3, 4
 					counterForYellow = 0; //reset
 				}
 			}
@@ -88,6 +105,12 @@ void fsm_for_input_processing(void){
 		case SET_TIME_GREEN: //Mode 4
 			loopFlag = 0;
 			while (loopFlag == 0) {
+				if (timer1_flag == 1) { //toggle GREEN LEDs every 0.5s
+					setTimer1(500);
+					HAL_GPIO_TogglePin(D3_GPIO_Port, D3_Pin);
+					HAL_GPIO_TogglePin(D5_GPIO_Port, D5_Pin);
+				}
+
 				if (isButtonPressed(1) == 1) counterForGreen++;
 
 				if(isButtonPressed(2) == 1) {

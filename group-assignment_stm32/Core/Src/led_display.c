@@ -39,21 +39,21 @@ void initTrafficLight2() {
 	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET); //0
 }
 void setTrafficGreen1() {
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET); //1
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET); //0
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET); //0
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET); //1
 }
 void setTrafficGreen2() {
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET); //1
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET); //0
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET); //0
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET); //1
 }
 
 void setTrafficRed1() {
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET); //0
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET); //1
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET); //1
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET); //0
 }
 void setTrafficRed2() {
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET); //0
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET); //1
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET); //1
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET); //0
 }
 
 void setTrafficYellow1() {
