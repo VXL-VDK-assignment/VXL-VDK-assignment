@@ -17,7 +17,7 @@ int counterForGreen = 0;
 int counterForYellow = 0;
 
 int loopFlag = 0;
-
+int counter;
 void fsm_for_input_processing(void){
 	switch(buttonState){
 		case NORMAL: //Mode 1
@@ -28,15 +28,30 @@ void fsm_for_input_processing(void){
 //			countDownRed2 = 0;
 //			countDownYellow1 = 0;
 //			countDownYellow2 = 0;
+			counter = led_duration[0];
+			setTimer4(1000);
 
 			LANE1_STATUS = LANE1_INIT;
 			LANE2_STATUS = LANE2_INIT;
+			LANE0_STATUS = LANE0_INIT;
 
 			while(1) {
+				if (timer4_flag == 1){
+					counter--;
+					setTimer4(1000);
+				}
+				if(timer5_flag ==1){
+					LANE0_STATUS = STOP;
+				}
 
 				fsm_automatic_run1();
 				fsm_automatic_run2();
+				fsm_automatic_run0();
 
+				if(isButtonPressed(3) == 1) {
+					checkflag = 1;
+					setTimer5((led_duration[0] + led_duration[1] + led_duration[2])*1000);
+				}
 				if(isButtonPressed(0) == 1) {
 					buttonState = SET_TIME_RED;
 					setTrafficRed1();

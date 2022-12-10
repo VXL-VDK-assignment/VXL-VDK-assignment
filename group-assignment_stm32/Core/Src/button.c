@@ -46,6 +46,11 @@ void getKeyInput() {
 				KeyReg1[i] = KeyReg0[i];
 				KeyReg0[i] = HAL_GPIO_ReadPin(A3_GPIO_Port, A3_Pin);
 				break;
+			case 3:
+				KeyReg2[i] = KeyReg1[i];
+				KeyReg1[i] = KeyReg0[i];
+				KeyReg0[i] = HAL_GPIO_ReadPin(A0_GPIO_Port, A0_Pin);
+				break;
 			default:
 				//todo
 				break;

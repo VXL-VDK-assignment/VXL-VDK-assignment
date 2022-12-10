@@ -12,6 +12,7 @@
 
 extern int led7SegState;
 extern int led7segState2;
+extern int checkflag;
 
 int getTimeAtIndex0(int time);
 int getTimeAtIndex1(int time);

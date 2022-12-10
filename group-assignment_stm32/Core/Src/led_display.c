@@ -29,6 +29,26 @@
 //	HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, ((number>>6)&0x01)^0x01);
 //}
 
+void initTrafficLight0() {
+	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, RESET); //0
+	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, RESET); //0
+}
+
+void setTrafficGreen0() {
+	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, RESET); //1
+	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, SET); //0
+}
+
+void setTrafficRed0() {
+	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, SET); //1
+	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, RESET); //0
+}
+
+void setTrafficYellow0() {
+	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, SET); //1
+	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, SET); //1
+}
+
 void initTrafficLight1() {
 	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET); //0
 	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET); //0

@@ -23,15 +23,22 @@
 #define LANE2_GREEN 13
 #define LANE2_YELLOW 14
 
+#define LANE0_INIT 21
+#define LANE0_RED 22
+#define LANE0_GREEN 23
+#define LANE0_YELLOW 24
+#define STOP 0
+
 extern int LANE1_STATUS;
 extern int LANE2_STATUS;
+extern int LANE0_STATUS;
 
 //extern int countDownRed1;
 //extern int countDownYellow1;
 //extern int countDownGreen1;
 
 extern int led_duration[3];
-
+extern int counter;
 
 //extern int countDownRed2;
 //extern int countDownYellow2;

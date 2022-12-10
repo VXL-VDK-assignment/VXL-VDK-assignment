@@ -8,6 +8,7 @@
 
 int LANE1_STATUS = LANE1_INIT;
 int LANE2_STATUS = LANE2_INIT;
+int LANE0_STATUS = LANE0_INIT;
 
 //int countDownRed1 = 0;
 //int countDownYellow1 = 0;

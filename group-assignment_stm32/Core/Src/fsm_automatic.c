@@ -18,13 +18,14 @@
 
 //int led7SegState = 1;
 //int led7SegState2 = 1;
-
+int checkflag = 0;
 void fsm_automatic_run1() {
 	switch(LANE1_STATUS) { //for lane 1
 		case LANE1_INIT:
 			initTrafficLight1();
 			LANE1_STATUS = LANE1_RED;
 			setTimer1(led_duration[0]*1000);
+
 //			timer4_flag = 1;
 //			led7SegState = 1;
 			break;
@@ -66,6 +67,7 @@ void fsm_automatic_run1() {
 //				countDownRed1 = 0; //reset
 //				timer4_flag = 1;
 //				led7SegState = 1;
+				counter = led_duration[2];
 			}
 			break;
 		case LANE1_GREEN:
@@ -75,6 +77,7 @@ void fsm_automatic_run1() {
 				setTimer1(led_duration[1]*1000);
 				LANE1_STATUS = LANE1_YELLOW;
 //				countDownGreen1 = 0; //reset
+				counter = led_duration[1];
 			}
 			break;
 		case LANE1_YELLOW:
@@ -84,6 +87,7 @@ void fsm_automatic_run1() {
 				setTimer1(led_duration[0]*1000);
 				LANE1_STATUS = LANE1_RED;
 //				countDownYellow1 = 0; //reset
+				counter = led_duration[0];
 			}
 			break;
 	}
@@ -152,6 +156,51 @@ void fsm_automatic_run2() {
 			}
 			break;
 	}
+
 }
 
+//fsm for pedestrian
+void fsm_automatic_run0() {
+	switch(LANE0_STATUS) {
+		case LANE0_INIT:
+			initTrafficLight0();
+			LANE0_STATUS = LANE0_GREEN;
+			setTimer3(led_duration[2]*1000);
+			break;
+		case LANE0_RED:
+			if (checkflag == 1)
+				setTrafficRed0();
+			if(timer3_flag == 1) {
+				setTimer3(led_duration[2]*1000);
+				LANE0_STATUS = LANE0_GREEN;
+			}
+			break;
+		case LANE0_GREEN:
+			if (checkflag == 1)
+				setTrafficGreen0();
+
+			if(timer3_flag == 1) {
+				if (counter <= 4){
+					setTimer3((counter+led_duration[0]-1)*1000);
+					LANE0_STATUS = LANE0_RED;
+				}else{
+					setTimer3(led_duration[1]*1000);
+					LANE0_STATUS = LANE0_YELLOW;
+				}
+
+			}
+			break;
+		case LANE0_YELLOW:
+			if (checkflag == 1)
+			setTrafficYellow0();
+			if(timer3_flag == 1) {
+				setTimer3(led_duration[0]*1000);
+				LANE0_STATUS = LANE0_RED;
+			}
+			break;
+		case STOP:
+			initTrafficLight0();
+			break;
+	}
+}
 
