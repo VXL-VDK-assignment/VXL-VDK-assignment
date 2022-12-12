@@ -109,12 +109,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint32_t aValue = 8;
-  char str[50];
+//  uint32_t aValue = 8;
+//  char str[50];
   initSomeVariables();
   while (1)
   {
-	  HAL_UART_Transmit(&huart2 , (void*)str, sprintf (str, "%d\n", aValue), 1000);
+//	  HAL_UART_Transmit(&huart2 , (void*)str, sprintf (str, "%d\n", aValue), 1000);
 	  fsm_for_input_processing();
     /* USER CODE END WHILE */
 
