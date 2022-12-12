@@ -12,6 +12,7 @@
 #include "button.h"
 #include "led_display.h"
 #include "main.h"
+#include <stdio.h>
 
 #define LANE1_INIT 1
 #define LANE1_RED 2
@@ -33,16 +34,16 @@ extern int LANE1_STATUS;
 extern int LANE2_STATUS;
 extern int LANE0_STATUS;
 
-//extern int countDownRed1;
-//extern int countDownYellow1;
-//extern int countDownGreen1;
+extern int countDownRed1;
+extern int countDownYellow1;
+extern int countDownGreen1;
 
 extern int led_duration[3];
 extern int counter;
 
-//extern int countDownRed2;
-//extern int countDownYellow2;
-//extern int countDownGreen2;
+extern int countDownRed2;
+extern int countDownYellow2;
+extern int countDownGreen2;
 
 
 
