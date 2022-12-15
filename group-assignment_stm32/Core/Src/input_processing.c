@@ -41,6 +41,7 @@ void fsm_for_input_processing(void){
 				}
 				if(timer5_flag ==1){
 					initTrafficLight0(); //turn off all lights
+					//cho buzzer tắt
 				}
 
 				fsm_automatic_run1();

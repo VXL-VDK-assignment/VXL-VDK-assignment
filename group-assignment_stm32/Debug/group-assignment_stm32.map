@@ -3919,27 +3919,27 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x0000000000000000    0x1162a
+.debug_info     0x0000000000000000    0x1160e
  .debug_info    0x0000000000000000      0xb4f ./Core/Src/button.o
  .debug_info    0x0000000000000b4f     0x156b ./Core/Src/fsm_automatic.o
  .debug_info    0x00000000000020ba     0x13cc ./Core/Src/global.o
- .debug_info    0x0000000000003486     0x153c ./Core/Src/input_processing.o
- .debug_info    0x00000000000049c2      0xae5 ./Core/Src/led_display.o
- .debug_info    0x00000000000054a7     0x190a ./Core/Src/main.o
- .debug_info    0x0000000000006db1      0x2cf ./Core/Src/software_timer.o
- .debug_info    0x0000000000007080      0xe50 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_info    0x0000000000007ed0      0xa2e ./Core/Src/stm32f1xx_it.o
- .debug_info    0x00000000000088fe      0xa25 ./Core/Src/sysmem.o
- .debug_info    0x0000000000009323      0x2be ./Core/Src/system_stm32f1xx.o
- .debug_info    0x00000000000095e1       0x22 ./Core/Startup/startup_stm32f103rbtx.o
- .debug_info    0x0000000000009603      0x76a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_info    0x0000000000009d6d      0xbdc ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_info    0x000000000000a949      0x81e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_info    0x000000000000b167      0x701 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_info    0x000000000000b868      0x88e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_info    0x000000000000c0f6     0x2a45 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_info    0x000000000000eb3b     0x14d5 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_info    0x0000000000010010     0x161a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_info    0x0000000000003486     0x1520 ./Core/Src/input_processing.o
+ .debug_info    0x00000000000049a6      0xae5 ./Core/Src/led_display.o
+ .debug_info    0x000000000000548b     0x190a ./Core/Src/main.o
+ .debug_info    0x0000000000006d95      0x2cf ./Core/Src/software_timer.o
+ .debug_info    0x0000000000007064      0xe50 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_info    0x0000000000007eb4      0xa2e ./Core/Src/stm32f1xx_it.o
+ .debug_info    0x00000000000088e2      0xa25 ./Core/Src/sysmem.o
+ .debug_info    0x0000000000009307      0x2be ./Core/Src/system_stm32f1xx.o
+ .debug_info    0x00000000000095c5       0x22 ./Core/Startup/startup_stm32f103rbtx.o
+ .debug_info    0x00000000000095e7      0x76a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_info    0x0000000000009d51      0xbdc ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_info    0x000000000000a92d      0x81e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_info    0x000000000000b14b      0x701 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_info    0x000000000000b84c      0x88e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_info    0x000000000000c0da     0x2a45 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_info    0x000000000000eb1f     0x14d5 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_info    0x000000000000fff4     0x161a ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
 .debug_abbrev   0x0000000000000000     0x2740
  .debug_abbrev  0x0000000000000000      0x1d9 ./Core/Src/button.o
@@ -4144,7 +4144,7 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_str     0x0000000000087caa       0x15 ./Core/Src/global.o
                                       0x87f33 (size before relaxing)
  .debug_str     0x0000000000087cbf       0xcd ./Core/Src/input_processing.o
-                                      0x880cd (size before relaxing)
+                                      0x880ba (size before relaxing)
  .debug_str     0x0000000000087d8c       0x2c ./Core/Src/led_display.o
                                       0x83d37 (size before relaxing)
  .debug_str     0x0000000000087db8      0x38f ./Core/Src/main.o

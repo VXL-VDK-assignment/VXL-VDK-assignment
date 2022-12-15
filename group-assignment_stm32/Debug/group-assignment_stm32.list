@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020094  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001162a  00000000  00000000  000200bd  2**0
+ 12 .debug_info   0001160e  00000000  00000000  000200bd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00002740  00000000  00000000  000316e7  2**0
+ 13 .debug_abbrev 00002740  00000000  00000000  000316cb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000d88  00000000  00000000  00033e28  2**3
+ 14 .debug_aranges 00000d88  00000000  00000000  00033e10  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000c78  00000000  00000000  00034bb0  2**3
+ 15 .debug_ranges 00000c78  00000000  00000000  00034b98  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000189bd  00000000  00000000  00035828  2**0
+ 16 .debug_macro  000189bd  00000000  00000000  00035810  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000f3aa  00000000  00000000  0004e1e5  2**0
+ 17 .debug_line   0000f3aa  00000000  00000000  0004e1cd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008b183  00000000  00000000  0005d58f  2**0
+ 18 .debug_str    0008b183  00000000  00000000  0005d577  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000e8712  2**0
+ 19 .comment      00000053  00000000  00000000  000e86fa  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003b98  00000000  00000000  000e8768  2**2
+ 20 .debug_frame  00003b98  00000000  00000000  000e8750  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2467,6 +2467,7 @@ void fsm_for_input_processing(void){
  80015aa:	d101      	bne.n	80015b0 <fsm_for_input_processing+0x90>
 					initTrafficLight0(); //turn off all lights
  80015ac:	f000 f95e 	bl	800186c <initTrafficLight0>
+					//cho buzzer tắt
 				}
 
 				fsm_automatic_run1();
