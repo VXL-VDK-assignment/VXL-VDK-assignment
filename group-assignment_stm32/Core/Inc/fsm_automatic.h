@@ -19,5 +19,6 @@ int getTimeAtIndex1(int time);
 
 void fsm_automatic_run1();
 void fsm_automatic_run2();
+void fsm_automatic_run0();
 
 #endif /* INC_FSM_AUTOMATIC_H_ */
