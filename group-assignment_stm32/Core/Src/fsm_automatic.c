@@ -36,28 +36,22 @@ void fsm_automatic_run1() {
 			if (timer4_flag == 1) {
 				switch(led7SegState) {
 				case 1:
-//					enableLed7Seg1();
-//					display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[0]-countDownRed1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[0]-countDownRed1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 2;
 					break;
 				case 2:
-//					enableLed7Seg2();
-//					display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[0]-countDownRed1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[0]-countDownRed1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 3;
 					break;
 				case 3:
-//					enableLed7Seg3();
 					setTimer4(250);
 					led7SegState = 4;
 					break;
 				case 4:
-//					enableLed7Seg4();
 					countDownRed1++;
 					setTimer4(250);
 					led7SegState = 1;
@@ -84,28 +78,22 @@ void fsm_automatic_run1() {
 			if (timer4_flag == 1) {
 				switch(led7SegState) {
 				case 1:
-//					enableLed7Seg1();
-//					display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[2]-countDownGreen1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[2]-countDownGreen1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 2;
 					break;
 				case 2:
-//					enableLed7Seg2();
-//					display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[2]-countDownGreen1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[2]-countDownGreen1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 3;
 					break;
 				case 3:
-//					enableLed7Seg3();
 					setTimer4(250);
 					led7SegState = 4;
 					break;
 				case 4:
-//					enableLed7Seg4();
 					countDownGreen1++;
 					setTimer4(250);
 					led7SegState = 1;
@@ -130,28 +118,22 @@ void fsm_automatic_run1() {
 			if (timer4_flag == 1) {
 				switch(led7SegState) {
 				case 1:
-//					enableLed7Seg1();
-//					display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[1]-countDownYellow1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[1]-countDownYellow1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 2;
 					break;
 				case 2:
-//					enableLed7Seg2();
-//					display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[1]-countDownYellow1)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[1]-countDownYellow1));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
 					setTimer4(250);
 					led7SegState = 3;
 					break;
 				case 3:
-//					enableLed7Seg3();
 					setTimer4(250);
 					led7SegState = 4;
 					break;
 				case 4:
-//					enableLed7Seg4();
 					countDownYellow1++;
 					setTimer4(250);
 					led7SegState = 1;
@@ -190,28 +172,22 @@ void fsm_automatic_run2() {
 			if (timer3_flag == 1) {
 				switch(led7SegState2) {
 				case 1:
-//					enableLed7Seg1();
 					setTimer3(250);
 					led7SegState2 = 2;
 					break;
 				case 2:
-//					enableLed7Seg2();
 					setTimer3(250);
 					led7SegState2 = 3;
 					break;
 				case 3:
-//					display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[0]-countDownRed2)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[0]-countDownRed2));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//					enableLed7Seg3();
 					setTimer3(250);
 					led7SegState2 = 4;
 					break;
 				case 4:
-//					display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[0]-countDownRed2)]);
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[0]-countDownRed2));
 					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//					enableLed7Seg4();
 					countDownRed2++;
 					setTimer3(250);
 					led7SegState2 = 1;
@@ -234,34 +210,25 @@ void fsm_automatic_run2() {
 			if (timer3_flag == 1) {
 				switch(led7SegState2) {
 				case 1:
-					//todo
-//						enableLed7Seg1();
-						setTimer3(250);
-						led7SegState2 = 2;
+					setTimer3(250);
+					led7SegState2 = 2;
 					break;
 				case 2:
-					//todo
-//						enableLed7Seg2();
-						setTimer3(250);
-						led7SegState2 = 3;
+					setTimer3(250);
+					led7SegState2 = 3;
 					break;
 				case 3:
-//						display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[2]-countDownGreen2)]);
-						sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[2]-countDownGreen2));
-						HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//						enableLed7Seg3();
-						setTimer3(250);
-						led7SegState2 = 4;
+					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[2]-countDownGreen2));
+					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
+					setTimer3(250);
+					led7SegState2 = 4;
 					break;
 				case 4:
-					//todo
-//						display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[2]-countDownGreen2)]);
-						sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[2]-countDownGreen2));
-						HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//						enableLed7Seg4();
-						countDownGreen2++;
-						setTimer3(250);
-						led7SegState2 = 1;
+					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[2]-countDownGreen2));
+					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
+					countDownGreen2++;
+					setTimer3(250);
+					led7SegState2 = 1;
 					break;
 				}
 			}
@@ -281,34 +248,25 @@ void fsm_automatic_run2() {
 			if (timer3_flag == 1) {
 				switch(led7SegState2) {
 				case 1:
-					//todo
-//						enableLed7Seg1();
-						setTimer3(250);
-						led7SegState2 = 2;
+					setTimer3(250);
+					led7SegState2 = 2;
 					break;
 				case 2:
-					//todo
-//						enableLed7Seg2();
-						setTimer3(250);
-						led7SegState2 = 3;
+					setTimer3(250);
+					led7SegState2 = 3;
 					break;
 				case 3:
-//						display7SEG_1(segmentNumber[getTimeAtIndex0(led_duration[1]-countDownYellow2)]);
-						sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[1]-countDownYellow2));
-						HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//						enableLed7Seg3();
-						setTimer3(250);
-						led7SegState2 = 4;
+					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex0(led_duration[1]-countDownYellow2));
+					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
+					setTimer3(250);
+					led7SegState2 = 4;
 					break;
 				case 4:
-					//todo
-//						display7SEG_1(segmentNumber[getTimeAtIndex1(led_duration[1]-countDownYellow2)]);
-						sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[1]-countDownYellow2));
-						HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
-//						enableLed7Seg4();
-						countDownYellow2++;
-						setTimer3(250);
-						led7SegState2 = 1;
+					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[1]-countDownYellow2));
+					HAL_UART_Transmit(&huart2, &buffer[0], 10, 1000);
+					countDownYellow2++;
+					setTimer3(250);
+					led7SegState2 = 1;
 					break;
 				}
 			}
@@ -332,41 +290,49 @@ void fsm_automatic_run0() {
 		case LANE0_INIT:
 			initTrafficLight0();
 			LANE0_STATUS = LANE0_GREEN;
-			setTimer3(led_duration[2]*1000);
+			setTimer7(led_duration[2]*1000);
+
+			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
+			timer10_flag = 1; //used for buzzer; make it louder in case green light
 			break;
 		case LANE0_RED:
-			if (checkflag == 1)
+			if (checkflag == 1) {
 				setTrafficRed0();
-			if(timer3_flag == 1) {
-				setTimer3(led_duration[2]*1000);
+			}
+
+			if(timer7_flag == 1) {
+				setTimer7(led_duration[2]*1000);
 				LANE0_STATUS = LANE0_GREEN;
 			}
 			break;
-		case LANE0_GREEN:
-			if (checkflag == 1)
+		case LANE0_GREEN: //only this case the pedestrian can cross the street
+			if (checkflag == 1) {
 				setTrafficGreen0();
-
-			if(timer3_flag == 1) {
-				if (counter <= 4){
-					setTimer3((counter+led_duration[0]-1)*1000);
-					LANE0_STATUS = LANE0_RED;
-				}else{
-					setTimer3(led_duration[1]*1000);
-					LANE0_STATUS = LANE0_YELLOW;
+				//Now make the buzzer louder in every 0.5s
+				if (timer10_flag == 1) {
+					setTimer10(500);
+					buzzerValue = buzzerValue - 999/(led_duration[2]/0.5); //decrease to value 0, so that the buzzer become more louder
+					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue);
 				}
+			}
 
+			if(timer7_flag == 1) {
+				setTimer7(led_duration[1]*1000);
+				LANE0_STATUS = LANE0_YELLOW;
 			}
 			break;
 		case LANE0_YELLOW:
-			if (checkflag == 1)
-			setTrafficYellow0();
-			if(timer3_flag == 1) {
-				setTimer3(led_duration[0]*1000);
+			buzzerValue = 999; //reset to make it stop working
+			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
+
+			if (checkflag == 1) {
+				setTrafficRed0(); //red light as well. lights for pedestrian do not have yellow light
+			}
+
+			if(timer7_flag == 1) {
+				setTimer7(led_duration[0]*1000);
 				LANE0_STATUS = LANE0_RED;
 			}
-			break;
-		case STOP:
-			initTrafficLight0();
 			break;
 	}
 }

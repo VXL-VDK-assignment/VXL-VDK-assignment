@@ -33,6 +33,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 extern UART_HandleTypeDef huart2; //important
+extern TIM_HandleTypeDef htim3;
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -50,6 +51,8 @@ extern UART_HandleTypeDef huart2; //important
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -64,6 +67,8 @@ void Error_Handler(void);
 #define A1_GPIO_Port GPIOA
 #define A2_Pin GPIO_PIN_4
 #define A2_GPIO_Port GPIOA
+#define D12_Pin GPIO_PIN_6
+#define D12_GPIO_Port GPIOA
 #define A3_Pin GPIO_PIN_0
 #define A3_GPIO_Port GPIOB
 #define D6_Pin GPIO_PIN_10

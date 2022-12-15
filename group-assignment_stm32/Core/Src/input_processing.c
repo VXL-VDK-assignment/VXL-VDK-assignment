@@ -21,26 +21,26 @@ void fsm_for_input_processing(void){
 	switch(buttonState){
 		case NORMAL: //Mode 1
 
-//			countDownGreen1 = 0;
-//			countDownGreen2 = 0;
-//			countDownRed1 = 0;
-//			countDownRed2 = 0;
-//			countDownYellow1 = 0;
-//			countDownYellow2 = 0;
+			countDownGreen1 = 0;
+			countDownGreen2 = 0;
+			countDownRed1 = 0;
+			countDownRed2 = 0;
+			countDownYellow1 = 0;
+			countDownYellow2 = 0;
 			counter = led_duration[0];
-			setTimer4(1000);
+			setTimer6(1000);
 
 			LANE1_STATUS = LANE1_INIT;
 			LANE2_STATUS = LANE2_INIT;
 			LANE0_STATUS = LANE0_INIT;
 
 			while(1) {
-				if (timer4_flag == 1){
+				if (timer6_flag == 1){
 					counter--;
-					setTimer4(1000);
+					setTimer6(1000);
 				}
 				if(timer5_flag ==1){
-					LANE0_STATUS = STOP;
+					initTrafficLight0(); //turn off all lights
 				}
 
 				fsm_automatic_run1();

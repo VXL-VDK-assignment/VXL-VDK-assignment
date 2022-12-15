@@ -28,7 +28,6 @@
 #define LANE0_RED 22
 #define LANE0_GREEN 23
 #define LANE0_YELLOW 24
-#define STOP 0
 
 extern int LANE1_STATUS;
 extern int LANE2_STATUS;
@@ -45,6 +44,6 @@ extern int countDownRed2;
 extern int countDownYellow2;
 extern int countDownGreen2;
 
-
+extern int buzzerValue;
 
 #endif /* INC_GLOBAL_H_ */
