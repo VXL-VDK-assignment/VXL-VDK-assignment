@@ -69,7 +69,6 @@ void fsm_automatic_run1() {
 				timer4_flag = 1;
 				led7SegState = 1;
 
-				counter = led_duration[2];
 			}
 			break;
 		case LANE1_GREEN:
@@ -109,7 +108,6 @@ void fsm_automatic_run1() {
 				timer4_flag = 1;
 				led7SegState = 1;//
 
-				counter = led_duration[1];
 			}
 			break;
 		case LANE1_YELLOW:
@@ -149,7 +147,6 @@ void fsm_automatic_run1() {
 				timer4_flag = 1;
 				led7SegState = 1;//
 
-				counter = led_duration[0];
 			}
 			break;
 	}

@@ -1,5 +1,5 @@
 fsm_automatic.c:11:5:getTimeAtIndex0	24	static
 fsm_automatic.c:15:5:getTimeAtIndex1	16	static
 fsm_automatic.c:22:6:fsm_automatic_run1	24	static
-fsm_automatic.c:158:6:fsm_automatic_run2	24	static
-fsm_automatic.c:288:6:fsm_automatic_run0	16	static
+fsm_automatic.c:155:6:fsm_automatic_run2	24	static
+fsm_automatic.c:285:6:fsm_automatic_run0	16	static

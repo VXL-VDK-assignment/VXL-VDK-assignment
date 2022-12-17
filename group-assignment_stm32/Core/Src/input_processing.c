@@ -16,7 +16,6 @@ int counterForGreen = 0;
 int counterForYellow = 0;
 
 int loopFlag = 0;
-int counter;
 void fsm_for_input_processing(void){
 	switch(buttonState){
 		case NORMAL: //Mode 1
@@ -27,7 +26,6 @@ void fsm_for_input_processing(void){
 			countDownRed2 = 0;
 			countDownYellow1 = 0;
 			countDownYellow2 = 0;
-			counter = led_duration[0];
 			setTimer6(1000);
 
 			LANE1_STATUS = LANE1_INIT;
@@ -35,13 +33,10 @@ void fsm_for_input_processing(void){
 			LANE0_STATUS = LANE0_INIT;
 
 			while(1) {
-				if (timer6_flag == 1){
-					counter--;
-					setTimer6(1000);
-				}
-				if(timer5_flag ==1){
+				if(timer5_flag == 1){
+					checkflag = 0; //reset checkflag
+					timer5_flag = 0; //reset timer5_flag
 					initTrafficLight0(); //turn off all lights
-					//cho buzzer tắt
 				}
 
 				fsm_automatic_run1();
