@@ -45,7 +45,7 @@ void fsm_for_input_processing(void){
 
 				if(isButtonPressed(3) == 1) {
 					checkflag = 1;
-					setTimer5((led_duration[0] + led_duration[1] + led_duration[2])*1000);
+					setTimer5((led_duration[0] + led_duration[1] + led_duration[2])*1000*2); //two cycles
 				}
 				if(isButtonPressed(0) == 1) {
 					buttonState = SET_TIME_RED;
