@@ -9,27 +9,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .rodata       00000068  080055ec  080055ec  000155ec  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08005654  08005654  00020094  2**0
+  3 .ARM.extab    00000000  08005654  08005654  00020090  2**0
                   CONTENTS
-  4 .ARM          00000000  08005654  08005654  00020094  2**0
+  4 .ARM          00000000  08005654  08005654  00020090  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08005654  08005654  00020094  2**0
+  5 .preinit_array 00000000  08005654  08005654  00020090  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000004  08005654  08005654  00015654  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .fini_array   00000004  08005658  08005658  00015658  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000094  20000000  0800565c  00020000  2**2
+  8 .data         00000090  20000000  0800565c  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          000001e4  20000094  080056f0  00020094  2**2
+  9 .bss          000001e8  20000090  080056ec  00020090  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  20000278  080056f0  00020278  2**0
+ 10 ._user_heap_stack 00000600  20000278  080056ec  00020278  2**0
                   ALLOC
- 11 .ARM.attributes 00000029  00000000  00000000  00020094  2**0
+ 11 .ARM.attributes 00000029  00000000  00000000  00020090  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00011600  00000000  00000000  000200bd  2**0
+ 12 .debug_info   00011600  00000000  00000000  000200b9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00002731  00000000  00000000  000316bd  2**0
+ 13 .debug_abbrev 00002731  00000000  00000000  000316b9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  14 .debug_aranges 00000d88  00000000  00000000  00033df0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -60,7 +60,7 @@ Disassembly of section .text:
  8000122:	2301      	movs	r3, #1
  8000124:	7023      	strb	r3, [r4, #0]
  8000126:	bd10      	pop	{r4, pc}
- 8000128:	20000094 	.word	0x20000094
+ 8000128:	20000090 	.word	0x20000090
  800012c:	00000000 	.word	0x00000000
  8000130:	080055d4 	.word	0x080055d4
 
@@ -73,7 +73,7 @@ Disassembly of section .text:
  800013e:	f3af 8000 	nop.w
  8000142:	bd08      	pop	{r3, pc}
  8000144:	00000000 	.word	0x00000000
- 8000148:	20000098 	.word	0x20000098
+ 8000148:	20000094 	.word	0x20000094
  800014c:	080055d4 	.word	0x080055d4
 
 08000150 <__aeabi_drsub>:
@@ -1540,15 +1540,15 @@ void fsm_automatic_run1() {
 					break;
  8000f12:	e027      	b.n	8000f64 <fsm_automatic_run1+0x338>
  8000f14:	20000008 	.word	0x20000008
- 8000f18:	20000018 	.word	0x20000018
+ 8000f18:	20000014 	.word	0x20000014
  8000f1c:	200000fc 	.word	0x200000fc
  8000f20:	20000000 	.word	0x20000000
- 8000f24:	200000b4 	.word	0x200000b4
+ 8000f24:	200000b0 	.word	0x200000b0
  8000f28:	080055ec 	.word	0x080055ec
  8000f2c:	20000220 	.word	0x20000220
  8000f30:	200000e4 	.word	0x200000e4
- 8000f34:	200000bc 	.word	0x200000bc
- 8000f38:	200000b8 	.word	0x200000b8
+ 8000f34:	200000b8 	.word	0x200000b8
+ 8000f38:	200000b4 	.word	0x200000b4
 				case 3:
 					setTimer4(250);
  8000f3c:	20fa      	movs	r0, #250	; 0xfa
@@ -1631,9 +1631,9 @@ void fsm_automatic_run1() {
  8000fac:	bd80      	pop	{r7, pc}
  8000fae:	bf00      	nop
  8000fb0:	20000000 	.word	0x20000000
- 8000fb4:	200000b8 	.word	0x200000b8
+ 8000fb4:	200000b4 	.word	0x200000b4
  8000fb8:	200000e4 	.word	0x200000e4
- 8000fbc:	20000018 	.word	0x20000018
+ 8000fbc:	20000014 	.word	0x20000014
  8000fc0:	20000008 	.word	0x20000008
  8000fc4:	200000fc 	.word	0x200000fc
 
@@ -2037,15 +2037,15 @@ void fsm_automatic_run2() {
 					break;
  8001292:	e035      	b.n	8001300 <fsm_automatic_run2+0x338>
  8001294:	2000000c 	.word	0x2000000c
- 8001298:	20000018 	.word	0x20000018
+ 8001298:	20000014 	.word	0x20000014
  800129c:	200000f4 	.word	0x200000f4
  80012a0:	20000004 	.word	0x20000004
- 80012a4:	200000c0 	.word	0x200000c0
+ 80012a4:	200000bc 	.word	0x200000bc
  80012a8:	080055ec 	.word	0x080055ec
  80012ac:	20000220 	.word	0x20000220
  80012b0:	200000ec 	.word	0x200000ec
- 80012b4:	200000c8 	.word	0x200000c8
- 80012b8:	200000c4 	.word	0x200000c4
+ 80012b4:	200000c4 	.word	0x200000c4
+ 80012b8:	200000c0 	.word	0x200000c0
 				case 4:
 					sprintf((char*)buffer, "!7SEG:%d#\r\n", getTimeAtIndex1(led_duration[1]-countDownYellow2));
  80012bc:	4b22      	ldr	r3, [pc, #136]	; (8001348 <fsm_automatic_run2+0x380>)
@@ -2133,8 +2133,8 @@ void fsm_automatic_run2() {
  8001342:	46bd      	mov	sp, r7
  8001344:	bd80      	pop	{r7, pc}
  8001346:	bf00      	nop
- 8001348:	20000018 	.word	0x20000018
- 800134c:	200000c4 	.word	0x200000c4
+ 8001348:	20000014 	.word	0x20000014
+ 800134c:	200000c0 	.word	0x200000c0
  8001350:	080055ec 	.word	0x080055ec
  8001354:	20000220 	.word	0x20000220
  8001358:	20000004 	.word	0x20000004
@@ -2153,7 +2153,7 @@ void fsm_automatic_run0() {
  800136e:	681b      	ldr	r3, [r3, #0]
  8001370:	3b15      	subs	r3, #21
  8001372:	2b03      	cmp	r3, #3
- 8001374:	f200 80aa 	bhi.w	80014cc <fsm_automatic_run0+0x164>
+ 8001374:	f200 80a9 	bhi.w	80014ca <fsm_automatic_run0+0x162>
  8001378:	a201      	add	r2, pc, #4	; (adr r2, 8001380 <fsm_automatic_run0+0x18>)
  800137a:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
  800137e:	bf00      	nop
@@ -2176,7 +2176,7 @@ void fsm_automatic_run0() {
  80013a6:	4618      	mov	r0, r3
  80013a8:	f000 fda4 	bl	8001ef4 <setTimer7>
 
-			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
+			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 0; do not work
  80013ac:	4b4c      	ldr	r3, [pc, #304]	; (80014e0 <fsm_automatic_run0+0x178>)
  80013ae:	681a      	ldr	r2, [r3, #0]
  80013b0:	4b4c      	ldr	r3, [pc, #304]	; (80014e4 <fsm_automatic_run0+0x17c>)
@@ -2187,7 +2187,7 @@ void fsm_automatic_run0() {
  80013b8:	2201      	movs	r2, #1
  80013ba:	601a      	str	r2, [r3, #0]
 			break;
- 80013bc:	e086      	b.n	80014cc <fsm_automatic_run0+0x164>
+ 80013bc:	e085      	b.n	80014ca <fsm_automatic_run0+0x162>
 		case LANE0_RED:
 			if (checkflag == 1) {
  80013be:	4b4b      	ldr	r3, [pc, #300]	; (80014ec <fsm_automatic_run0+0x184>)
@@ -2202,7 +2202,7 @@ void fsm_automatic_run0() {
  80013ca:	4b49      	ldr	r3, [pc, #292]	; (80014f0 <fsm_automatic_run0+0x188>)
  80013cc:	681b      	ldr	r3, [r3, #0]
  80013ce:	2b01      	cmp	r3, #1
- 80013d0:	d177      	bne.n	80014c2 <fsm_automatic_run0+0x15a>
+ 80013d0:	d176      	bne.n	80014c0 <fsm_automatic_run0+0x158>
 				setTimer7(led_duration[2]*1000);
  80013d2:	4b42      	ldr	r3, [pc, #264]	; (80014dc <fsm_automatic_run0+0x174>)
  80013d4:	689b      	ldr	r3, [r3, #8]
@@ -2216,7 +2216,7 @@ void fsm_automatic_run0() {
  80013e8:	601a      	str	r2, [r3, #0]
 			}
 			break;
- 80013ea:	e06a      	b.n	80014c2 <fsm_automatic_run0+0x15a>
+ 80013ea:	e069      	b.n	80014c0 <fsm_automatic_run0+0x158>
 		case LANE0_GREEN: //only this case the pedestrian can cross the street
 			if (checkflag == 1) {
  80013ec:	4b3f      	ldr	r3, [pc, #252]	; (80014ec <fsm_automatic_run0+0x184>)
@@ -2234,7 +2234,7 @@ void fsm_automatic_run0() {
 					setTimer10(500);
  8001400:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8001404:	f000 fd92 	bl	8001f2c <setTimer10>
-					buzzerValue = buzzerValue - 999/(led_duration[2]/0.5); //decrease to value 0, so that the buzzer become more louder
+					buzzerValue = buzzerValue + 999/(led_duration[2]/0.5); //increase to value 999, so that the buzzer become more louder
  8001408:	4b35      	ldr	r3, [pc, #212]	; (80014e0 <fsm_automatic_run0+0x178>)
  800140a:	681b      	ldr	r3, [r3, #0]
  800140c:	4618      	mov	r0, r3
@@ -2257,7 +2257,7 @@ void fsm_automatic_run0() {
  800143a:	460b      	mov	r3, r1
  800143c:	4620      	mov	r0, r4
  800143e:	4629      	mov	r1, r5
- 8001440:	f7fe fe8a 	bl	8000158 <__aeabi_dsub>
+ 8001440:	f7fe fe8c 	bl	800015c <__adddf3>
  8001444:	4602      	mov	r2, r0
  8001446:	460b      	mov	r3, r1
  8001448:	4610      	mov	r0, r2
@@ -2279,7 +2279,7 @@ void fsm_automatic_run0() {
  8001460:	4b23      	ldr	r3, [pc, #140]	; (80014f0 <fsm_automatic_run0+0x188>)
  8001462:	681b      	ldr	r3, [r3, #0]
  8001464:	2b01      	cmp	r3, #1
- 8001466:	d12e      	bne.n	80014c6 <fsm_automatic_run0+0x15e>
+ 8001466:	d12d      	bne.n	80014c4 <fsm_automatic_run0+0x15c>
 				setTimer7(led_duration[1]*1000);
  8001468:	4b1c      	ldr	r3, [pc, #112]	; (80014dc <fsm_automatic_run0+0x174>)
  800146a:	685b      	ldr	r3, [r3, #4]
@@ -2293,67 +2293,68 @@ void fsm_automatic_run0() {
  800147e:	601a      	str	r2, [r3, #0]
 			}
 			break;
- 8001480:	e021      	b.n	80014c6 <fsm_automatic_run0+0x15e>
+ 8001480:	e020      	b.n	80014c4 <fsm_automatic_run0+0x15c>
 		case LANE0_YELLOW:
-			buzzerValue = 999; //reset to make it stop working
+			buzzerValue = 0; //reset to make it stop working
  8001482:	4b17      	ldr	r3, [pc, #92]	; (80014e0 <fsm_automatic_run0+0x178>)
- 8001484:	f240 32e7 	movw	r2, #999	; 0x3e7
- 8001488:	601a      	str	r2, [r3, #0]
+ 8001484:	2200      	movs	r2, #0
+ 8001486:	601a      	str	r2, [r3, #0]
 			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
- 800148a:	4b15      	ldr	r3, [pc, #84]	; (80014e0 <fsm_automatic_run0+0x178>)
- 800148c:	681a      	ldr	r2, [r3, #0]
- 800148e:	4b15      	ldr	r3, [pc, #84]	; (80014e4 <fsm_automatic_run0+0x17c>)
- 8001490:	681b      	ldr	r3, [r3, #0]
- 8001492:	635a      	str	r2, [r3, #52]	; 0x34
+ 8001488:	4b15      	ldr	r3, [pc, #84]	; (80014e0 <fsm_automatic_run0+0x178>)
+ 800148a:	681a      	ldr	r2, [r3, #0]
+ 800148c:	4b15      	ldr	r3, [pc, #84]	; (80014e4 <fsm_automatic_run0+0x17c>)
+ 800148e:	681b      	ldr	r3, [r3, #0]
+ 8001490:	635a      	str	r2, [r3, #52]	; 0x34
 
 			if (checkflag == 1) {
- 8001494:	4b15      	ldr	r3, [pc, #84]	; (80014ec <fsm_automatic_run0+0x184>)
- 8001496:	681b      	ldr	r3, [r3, #0]
- 8001498:	2b01      	cmp	r3, #1
- 800149a:	d101      	bne.n	80014a0 <fsm_automatic_run0+0x138>
+ 8001492:	4b16      	ldr	r3, [pc, #88]	; (80014ec <fsm_automatic_run0+0x184>)
+ 8001494:	681b      	ldr	r3, [r3, #0]
+ 8001496:	2b01      	cmp	r3, #1
+ 8001498:	d101      	bne.n	800149e <fsm_automatic_run0+0x136>
 				setTrafficRed0(); //red light as well. lights for pedestrian do not have yellow light
- 800149c:	f000 f9ea 	bl	8001874 <setTrafficRed0>
+ 800149a:	f000 f9eb 	bl	8001874 <setTrafficRed0>
 			}
 
 			if(timer7_flag == 1) {
- 80014a0:	4b13      	ldr	r3, [pc, #76]	; (80014f0 <fsm_automatic_run0+0x188>)
- 80014a2:	681b      	ldr	r3, [r3, #0]
- 80014a4:	2b01      	cmp	r3, #1
- 80014a6:	d110      	bne.n	80014ca <fsm_automatic_run0+0x162>
+ 800149e:	4b14      	ldr	r3, [pc, #80]	; (80014f0 <fsm_automatic_run0+0x188>)
+ 80014a0:	681b      	ldr	r3, [r3, #0]
+ 80014a2:	2b01      	cmp	r3, #1
+ 80014a4:	d110      	bne.n	80014c8 <fsm_automatic_run0+0x160>
 				setTimer7(led_duration[0]*1000);
- 80014a8:	4b0c      	ldr	r3, [pc, #48]	; (80014dc <fsm_automatic_run0+0x174>)
- 80014aa:	681b      	ldr	r3, [r3, #0]
- 80014ac:	f44f 727a 	mov.w	r2, #1000	; 0x3e8
- 80014b0:	fb02 f303 	mul.w	r3, r2, r3
- 80014b4:	4618      	mov	r0, r3
- 80014b6:	f000 fd1d 	bl	8001ef4 <setTimer7>
+ 80014a6:	4b0d      	ldr	r3, [pc, #52]	; (80014dc <fsm_automatic_run0+0x174>)
+ 80014a8:	681b      	ldr	r3, [r3, #0]
+ 80014aa:	f44f 727a 	mov.w	r2, #1000	; 0x3e8
+ 80014ae:	fb02 f303 	mul.w	r3, r2, r3
+ 80014b2:	4618      	mov	r0, r3
+ 80014b4:	f000 fd1e 	bl	8001ef4 <setTimer7>
 				LANE0_STATUS = LANE0_RED;
- 80014ba:	4b07      	ldr	r3, [pc, #28]	; (80014d8 <fsm_automatic_run0+0x170>)
- 80014bc:	2216      	movs	r2, #22
- 80014be:	601a      	str	r2, [r3, #0]
+ 80014b8:	4b07      	ldr	r3, [pc, #28]	; (80014d8 <fsm_automatic_run0+0x170>)
+ 80014ba:	2216      	movs	r2, #22
+ 80014bc:	601a      	str	r2, [r3, #0]
 			}
 			break;
- 80014c0:	e003      	b.n	80014ca <fsm_automatic_run0+0x162>
+ 80014be:	e003      	b.n	80014c8 <fsm_automatic_run0+0x160>
 			break;
- 80014c2:	bf00      	nop
- 80014c4:	e002      	b.n	80014cc <fsm_automatic_run0+0x164>
+ 80014c0:	bf00      	nop
+ 80014c2:	e002      	b.n	80014ca <fsm_automatic_run0+0x162>
 			break;
- 80014c6:	bf00      	nop
- 80014c8:	e000      	b.n	80014cc <fsm_automatic_run0+0x164>
+ 80014c4:	bf00      	nop
+ 80014c6:	e000      	b.n	80014ca <fsm_automatic_run0+0x162>
 			break;
- 80014ca:	bf00      	nop
+ 80014c8:	bf00      	nop
 	}
 }
- 80014cc:	bf00      	nop
- 80014ce:	bdb0      	pop	{r4, r5, r7, pc}
+ 80014ca:	bf00      	nop
+ 80014cc:	bdb0      	pop	{r4, r5, r7, pc}
+ 80014ce:	bf00      	nop
  80014d0:	00000000 	.word	0x00000000
  80014d4:	408f3800 	.word	0x408f3800
  80014d8:	20000010 	.word	0x20000010
- 80014dc:	20000018 	.word	0x20000018
- 80014e0:	20000014 	.word	0x20000014
+ 80014dc:	20000014 	.word	0x20000014
+ 80014e0:	200000c8 	.word	0x200000c8
  80014e4:	20000190 	.word	0x20000190
  80014e8:	2000011c 	.word	0x2000011c
- 80014ec:	200000b0 	.word	0x200000b0
+ 80014ec:	200000ac 	.word	0x200000ac
  80014f0:	20000114 	.word	0x20000114
  80014f4:	3fe00000 	.word	0x3fe00000
 
@@ -2708,18 +2709,18 @@ void fsm_for_input_processing(void){
 			while (loopFlag == 0) {
  800172e:	e066      	b.n	80017fe <fsm_for_input_processing+0x306>
  8001730:	200000cc 	.word	0x200000cc
- 8001734:	200000bc 	.word	0x200000bc
- 8001738:	200000c8 	.word	0x200000c8
- 800173c:	200000b4 	.word	0x200000b4
- 8001740:	200000c0 	.word	0x200000c0
- 8001744:	200000b8 	.word	0x200000b8
- 8001748:	200000c4 	.word	0x200000c4
+ 8001734:	200000b8 	.word	0x200000b8
+ 8001738:	200000c4 	.word	0x200000c4
+ 800173c:	200000b0 	.word	0x200000b0
+ 8001740:	200000bc 	.word	0x200000bc
+ 8001744:	200000b4 	.word	0x200000b4
+ 8001748:	200000c0 	.word	0x200000c0
  800174c:	20000008 	.word	0x20000008
  8001750:	2000000c 	.word	0x2000000c
  8001754:	20000010 	.word	0x20000010
  8001758:	20000104 	.word	0x20000104
- 800175c:	200000b0 	.word	0x200000b0
- 8001760:	20000018 	.word	0x20000018
+ 800175c:	200000ac 	.word	0x200000ac
+ 8001760:	20000014 	.word	0x20000014
  8001764:	200000dc 	.word	0x200000dc
  8001768:	200000e4 	.word	0x200000e4
  800176c:	40010800 	.word	0x40010800
@@ -2818,7 +2819,7 @@ void fsm_for_input_processing(void){
  800180c:	200000e4 	.word	0x200000e4
  8001810:	40010c00 	.word	0x40010c00
  8001814:	200000d4 	.word	0x200000d4
- 8001818:	20000018 	.word	0x20000018
+ 8001818:	20000014 	.word	0x20000014
  800181c:	200000cc 	.word	0x200000cc
  8001820:	200000dc 	.word	0x200000dc
 
@@ -4931,11 +4932,11 @@ LoopFillZerobss:
   ldr r0, =_sdata
  80023ac:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 80023b0:	20000094 	.word	0x20000094
+ 80023b0:	20000090 	.word	0x20000090
   ldr r2, =_sidata
  80023b4:	0800565c 	.word	0x0800565c
   ldr r2, =_sbss
- 80023b8:	20000094 	.word	0x20000094
+ 80023b8:	20000090 	.word	0x20000090
   ldr r4, =_ebss
  80023bc:	20000278 	.word	0x20000278
 
@@ -5057,9 +5058,9 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  800243e:	3708      	adds	r7, #8
  8002440:	46bd      	mov	sp, r7
  8002442:	bd80      	pop	{r7, pc}
- 8002444:	20000024 	.word	0x20000024
- 8002448:	2000002c 	.word	0x2000002c
- 800244c:	20000028 	.word	0x20000028
+ 8002444:	20000020 	.word	0x20000020
+ 8002448:	20000028 	.word	0x20000028
+ 800244c:	20000024 	.word	0x20000024
 
 08002450 <HAL_IncTick>:
   * @note This function is declared as __weak to be overwritten in case of other
@@ -5084,7 +5085,7 @@ __weak void HAL_IncTick(void)
  8002466:	46bd      	mov	sp, r7
  8002468:	bc80      	pop	{r7}
  800246a:	4770      	bx	lr
- 800246c:	2000002c 	.word	0x2000002c
+ 800246c:	20000028 	.word	0x20000028
  8002470:	20000264 	.word	0x20000264
 
 08002474 <HAL_GetTick>:
@@ -7569,8 +7570,8 @@ if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK1) == RCC_CLOCKTYPE_PCLK
  800325c:	40022000 	.word	0x40022000
  8003260:	40021000 	.word	0x40021000
  8003264:	08005608 	.word	0x08005608
- 8003268:	20000024 	.word	0x20000024
- 800326c:	20000028 	.word	0x20000028
+ 8003268:	20000020 	.word	0x20000020
+ 800326c:	20000024 	.word	0x20000024
 
 08003270 <HAL_RCC_GetSysClockFreq>:
   *         right SYSCLK value. Otherwise, any configuration based on this function will be incorrect.
@@ -7738,7 +7739,7 @@ uint32_t HAL_RCC_GetHCLKFreq(void)
  800333a:	46bd      	mov	sp, r7
  800333c:	bc80      	pop	{r7}
  800333e:	4770      	bx	lr
- 8003340:	20000024 	.word	0x20000024
+ 8003340:	20000020 	.word	0x20000020
 
 08003344 <HAL_RCC_GetPCLK1Freq>:
   * @note   Each time PCLK1 changes, this function must be called to update the
@@ -7830,7 +7831,7 @@ static void RCC_Delay(uint32_t mdelay)
  80033c2:	46bd      	mov	sp, r7
  80033c4:	bc80      	pop	{r7}
  80033c6:	4770      	bx	lr
- 80033c8:	20000024 	.word	0x20000024
+ 80033c8:	20000020 	.word	0x20000020
  80033cc:	10624dd3 	.word	0x10624dd3
 
 080033d0 <HAL_TIM_Base_Init>:
@@ -12500,7 +12501,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8004cfe:	6818      	ldr	r0, [r3, #0]
  8004d00:	4770      	bx	lr
  8004d02:	bf00      	nop
- 8004d04:	20000030 	.word	0x20000030
+ 8004d04:	2000002c 	.word	0x2000002c
 
 08004d08 <__libc_init_array>:
  8004d08:	b570      	push	{r4, r5, r6, lr}
@@ -12567,7 +12568,7 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  8004d90:	f85d eb04 	ldr.w	lr, [sp], #4
  8004d94:	b003      	add	sp, #12
  8004d96:	4770      	bx	lr
- 8004d98:	20000030 	.word	0x20000030
+ 8004d98:	2000002c 	.word	0x2000002c
  8004d9c:	ffff0208 	.word	0xffff0208
 
 08004da0 <__ssputs_r>:

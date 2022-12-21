@@ -289,7 +289,7 @@ void fsm_automatic_run0() {
 			LANE0_STATUS = LANE0_GREEN;
 			setTimer7(led_duration[2]*1000);
 
-			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
+			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 0; do not work
 			timer10_flag = 1; //used for buzzer; make it louder in case green light
 			break;
 		case LANE0_RED:
@@ -308,7 +308,7 @@ void fsm_automatic_run0() {
 				//Now make the buzzer louder in every 0.5s
 				if (timer10_flag == 1) {
 					setTimer10(500);
-					buzzerValue = buzzerValue - 999/(led_duration[2]/0.5); //decrease to value 0, so that the buzzer become more louder
+					buzzerValue = buzzerValue + 999/(led_duration[2]/0.5); //increase to value 999, so that the buzzer become more louder
 					__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue);
 				}
 			}
@@ -319,7 +319,7 @@ void fsm_automatic_run0() {
 			}
 			break;
 		case LANE0_YELLOW:
-			buzzerValue = 999; //reset to make it stop working
+			buzzerValue = 0; //reset to make it stop working
 			__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, buzzerValue); //at this time, buzzerValue = 999; do not work
 
 			if (checkflag == 1) {

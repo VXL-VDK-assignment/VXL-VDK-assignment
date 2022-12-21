@@ -39,7 +39,7 @@ c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externalt
 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-lock.o)
                               c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-mlock.o) (__retarget_lock_acquire_recursive)
 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
-                              ./Core/Src/fsm_automatic.o (__aeabi_dsub)
+                              ./Core/Src/fsm_automatic.o (__aeabi_dadd)
 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivdf3.o)
                               ./Core/Src/fsm_automatic.o (__aeabi_ddiv)
 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_arm_fixdfsi.o)
@@ -3620,7 +3620,7 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x000000000800565c                . = ALIGN (0x4)
                 0x000000000800565c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x94 load address 0x000000000800565c
+.data           0x0000000020000000       0x90 load address 0x000000000800565c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3640,63 +3640,63 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .data.LANE0_STATUS
                 0x0000000020000010        0x4 ./Core/Src/global.o
                 0x0000000020000010                LANE0_STATUS
- .data.buzzerValue
-                0x0000000020000014        0x4 ./Core/Src/global.o
-                0x0000000020000014                buzzerValue
  .data.led_duration
-                0x0000000020000018        0xc ./Core/Src/global.o
-                0x0000000020000018                led_duration
+                0x0000000020000014        0xc ./Core/Src/global.o
+                0x0000000020000014                led_duration
  .data.SystemCoreClock
-                0x0000000020000024        0x4 ./Core/Src/system_stm32f1xx.o
-                0x0000000020000024                SystemCoreClock
+                0x0000000020000020        0x4 ./Core/Src/system_stm32f1xx.o
+                0x0000000020000020                SystemCoreClock
  .data.uwTickPrio
-                0x0000000020000028        0x4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x0000000020000028                uwTickPrio
+                0x0000000020000024        0x4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000020000024                uwTickPrio
  .data.uwTickFreq
-                0x000000002000002c        0x1 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x000000002000002c                uwTickFreq
- *fill*         0x000000002000002d        0x3 
+                0x0000000020000028        0x1 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000020000028                uwTickFreq
+ *fill*         0x0000000020000029        0x3 
  .data._impure_ptr
-                0x0000000020000030        0x4 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-impure.o)
-                0x0000000020000030                _impure_ptr
+                0x000000002000002c        0x4 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-impure.o)
+                0x000000002000002c                _impure_ptr
  .data.impure_data
-                0x0000000020000034       0x60 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-impure.o)
+                0x0000000020000030       0x60 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-impure.o)
  *(.RamFunc)
  *(.RamFunc*)
-                0x0000000020000094                . = ALIGN (0x4)
-                0x0000000020000094                _edata = .
+                0x0000000020000090                . = ALIGN (0x4)
+                0x0000000020000090                _edata = .
 
-.igot.plt       0x0000000020000094        0x0 load address 0x00000000080056f0
- .igot.plt      0x0000000020000094        0x0 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000020000094                . = ALIGN (0x4)
+.igot.plt       0x0000000020000090        0x0 load address 0x00000000080056ec
+ .igot.plt      0x0000000020000090        0x0 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000020000090                . = ALIGN (0x4)
 
-.bss            0x0000000020000094      0x1e4 load address 0x00000000080056f0
-                0x0000000020000094                _sbss = .
-                0x0000000020000094                __bss_start__ = _sbss
+.bss            0x0000000020000090      0x1e8 load address 0x00000000080056ec
+                0x0000000020000090                _sbss = .
+                0x0000000020000090                __bss_start__ = _sbss
  *(.bss)
- .bss           0x0000000020000094       0x1c c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
+ .bss           0x0000000020000090       0x1c c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.bss*)
  .bss.checkflag
-                0x00000000200000b0        0x4 ./Core/Src/fsm_automatic.o
-                0x00000000200000b0                checkflag
+                0x00000000200000ac        0x4 ./Core/Src/fsm_automatic.o
+                0x00000000200000ac                checkflag
  .bss.countDownRed1
-                0x00000000200000b4        0x4 ./Core/Src/global.o
-                0x00000000200000b4                countDownRed1
+                0x00000000200000b0        0x4 ./Core/Src/global.o
+                0x00000000200000b0                countDownRed1
  .bss.countDownYellow1
-                0x00000000200000b8        0x4 ./Core/Src/global.o
-                0x00000000200000b8                countDownYellow1
+                0x00000000200000b4        0x4 ./Core/Src/global.o
+                0x00000000200000b4                countDownYellow1
  .bss.countDownGreen1
-                0x00000000200000bc        0x4 ./Core/Src/global.o
-                0x00000000200000bc                countDownGreen1
+                0x00000000200000b8        0x4 ./Core/Src/global.o
+                0x00000000200000b8                countDownGreen1
  .bss.countDownRed2
-                0x00000000200000c0        0x4 ./Core/Src/global.o
-                0x00000000200000c0                countDownRed2
+                0x00000000200000bc        0x4 ./Core/Src/global.o
+                0x00000000200000bc                countDownRed2
  .bss.countDownYellow2
-                0x00000000200000c4        0x4 ./Core/Src/global.o
-                0x00000000200000c4                countDownYellow2
+                0x00000000200000c0        0x4 ./Core/Src/global.o
+                0x00000000200000c0                countDownYellow2
  .bss.countDownGreen2
+                0x00000000200000c4        0x4 ./Core/Src/global.o
+                0x00000000200000c4                countDownGreen2
+ .bss.buzzerValue
                 0x00000000200000c8        0x4 ./Core/Src/global.o
-                0x00000000200000c8                countDownGreen2
+                0x00000000200000c8                buzzerValue
  .bss.buttonState
                 0x00000000200000cc        0x1 ./Core/Src/input_processing.o
                 0x00000000200000cc                buttonState
@@ -3803,7 +3803,7 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000020000278                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000278      0x600 load address 0x00000000080056f0
+                0x0000000020000278      0x600 load address 0x00000000080056ec
                 0x0000000020000278                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x0000000020000278                PROVIDE (_end = .)
